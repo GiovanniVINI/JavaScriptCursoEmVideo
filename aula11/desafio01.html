@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é brasileiro?</title>
+</head>
+<body>
+    <h1>Teste - Você é brasileiro?</h1>
+    Onde você nasceu: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="teste()">
+    <div id="res"></div>
+    <script>
+        function teste() {
+            var nasc = (document.querySelector('#txtnac').value)
+                res = document.querySelector('#res')
+                res.innerHTML = `<p>Lugar de nascimento: <strong>${nasc}</strong></p>`
+            if (nasc == 'Brasil') {
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
